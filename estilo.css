@@ -1,0 +1,300 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242424;
+    color: #dedede;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+}
+
+
+
+
+.cabecalho {
+    background-color: #39ff14;
+    color: #111;
+
+    padding: 55px 35px;
+    text-align: center;
+
+    border-bottom: 5px solid #181818;
+}
+
+.cabecalho h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.cabecalho p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/
+
+.apresentacao {
+    padding: 50px 35px 35px;
+    max-width: 1000px;
+}
+
+.apresentacao h2 {
+    color: #39ff14;
+    margin-bottom: 15px;
+}
+
+.apresentacao p {
+    max-width: 800px;
+}
+
+
+
+
+.area-cards {
+    padding: 30px 35px 80px;
+}
+
+.titulo-secao {
+    color: #39ff14;
+    margin-bottom: 35px;
+    font-size: 30px;
+}
+
+
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+
+    align-items: center;
+}
+
+
+
+
+.card-container {
+    width: 280px;
+    height: 380px;
+
+    perspective: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+
+    cursor: pointer;
+}
+
+
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+
+
+.card-front,
+.card-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    border-radius: 12px;
+    border: 2px solid #39ff14;
+
+    backface-visibility: hidden;
+}
+
+
+
+
+.card-front {
+    background-color: #39ff14;
+    color: #111;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.card-front h2 {
+    font-size: 25px;
+}
+
+.card-hint {
+    font-size: 12px;
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+
+
+
+.card-back {
+    background-color: #303030;
+    color: #dedede;
+
+    transform: rotateY(180deg);
+
+    padding: 20px;
+
+    overflow-y: auto;
+}
+
+.card-back h2 {
+    color: #39ff14;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card-back p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.card-back ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 10px 0;
+}
+
+.card-back li {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.hobbies-front {
+    background-color: #39ff14;
+}
+
+.servicos-front {
+    background-color: #b7ff65;
+}
+
+.futuro-front {
+    background-color: #a0e94f;
+}
+
+
+.motivo {
+    margin: 30px 35px 80px;
+
+    background-color: #303030;
+
+    padding: 35px 30px;
+
+    max-width: 900px;
+}
+
+.motivo-conteudo {
+    max-width: 750px;
+}
+
+.etiqueta {
+    color: #39ff14;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.motivo h2 {
+    color: #39ff14;
+    font-size: 30px;
+    margin: 10px 0 20px;
+}
+
+.motivo p {
+    margin-bottom: 18px;
+}
+
+
+
+
+.rodape {
+    background-color: #111;
+    padding: 40px 35px;
+    text-align: left;
+}
+
+.rodape h2 {
+    color: #39ff14;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.rodape p {
+    max-width: 750px;
+}
+
+.assinatura {
+    color: #39ff14;
+    font-size: 13px;
+
+    margin-top: 25px;
+    opacity: 0.7;
+}
+
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+        padding: 35px 20px;
+    }
+
+    .cabecalho h1 {
+        font-size: 32px;
+    }
+
+    .apresentacao,
+    .area-cards {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cards-container {
+        justify-content: center;
+    }
+
+    .card-container {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .motivo {
+        margin: 20px;
+        padding: 25px 20px;
+    }
+
+    .motivo h2 {
+        font-size: 25px;
+    }
+
+    .rodape {
+        padding: 30px 20px;
+    }
+
+}
